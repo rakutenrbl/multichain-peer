@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+
+  multichain-peer:
+    image: rakutenrbl/multichain-peer:latest
+    ports:
+      - "8002:9578"
+    environment:
+      CHAIN: test-chain
