@@ -2,9 +2,15 @@ version: '2'
 
 services:
 
-  multichain-peer:
+  peer:
     image: rakutenrbl/multichain-peer:latest
+    volumes:
+      - multichain_data:/root
     ports:
       - "8002:9578"
     environment:
       CHAIN: test-chain
+      PEER: rblmcsandbox.westeurope.cloudapp.azure.com:2001
+
+volumes:
+  multichain_data:
