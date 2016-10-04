@@ -7,10 +7,10 @@ services:
     volumes:
       - multichain_data:/root
     ports:
-      - "8002:9578"
+      - "9578:9578"
     environment:
       CHAIN: test-chain
-      PEER: rblmcsandbox.westeurope.cloudapp.azure.com:2001
+      PEER: rtcblockchain01.westeurope.cloudapp.azure.com:9579
 
 volumes:
   multichain_data:
