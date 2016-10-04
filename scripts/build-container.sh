@@ -16,6 +16,7 @@ docker build -t ${DOMAIN}/${APP}:${VERSION} .
 
 docker tag ${DOMAIN}/${APP}:${VERSION} ${DOMAIN}/${APP}:latest
 docker images ${DOMAIN}/${APP}
+
 echo
 
 echo 'Done'
