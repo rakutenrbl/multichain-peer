@@ -19,7 +19,8 @@
 				"8e6a1c07-8ad7-e2a9-445c-e046c34901f9",
 				"f7399a93-9969-efdd-489f-45d31ecf7717",
 				"5f2b144e-205a-3afb-9de4-4d9b6f44ffc4",
-				"57e54504-8f4d-4b70-d85b-126ed865fe28"
+				"57e54504-8f4d-4b70-d85b-126ed865fe28",
+				"54a57a41-88e3-7a7a-665a-cd3526738b8f"
 			],
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1"
 		},
@@ -267,7 +268,7 @@
 		},
 		{
 			"id": "43032975-4dc3-7276-86a4-b9d73570eeed",
-			"headers": "Authorization: Basic bXVsdGljaGFpbnJwYzo3OXBnS1F1c2lIM1ZEVnB5enNNNmUza1J6NmdXTmN0QXdnSnZ5bUczaWl1eg==\nContent-Type: application/json\n",
+			"headers": "Authorization: Basic {{access-token}}\nContent-Type: application/json\n",
 			"url": "{{chain-url}}",
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -277,7 +278,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474699115734,
+			"time": 1475585923406,
 			"name": "Issue Crimson Coin",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
@@ -321,6 +322,25 @@
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
 			"rawModeData": "{\n\t\"method\":\"decoderawtransaction\",\n\t\"params\":[\"{{tx-hex}}\"],\n\t\"id\":1,\n\t\"chain_name\":\"{{chain-name}}\"\n}"
+		},
+		{
+			"id": "54a57a41-88e3-7a7a-665a-cd3526738b8f",
+			"headers": "Authorization: Basic {{access-token}}\nContent-Type: application/json\n",
+			"url": "{{chain-url}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1475849969276,
+			"name": "List Permissions",
+			"description": "",
+			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
+			"responses": [],
+			"rawModeData": "{\"method\":\"listpermissions\",\"params\":[],\"id\":1,\"chain_name\":\"{{chain-name}}\"}"
 		},
 		{
 			"id": "57e54504-8f4d-4b70-d85b-126ed865fe28",
@@ -517,7 +537,7 @@
 		},
 		{
 			"id": "84642e2e-d42d-b7b5-36e6-14500d8dda53",
-			"headers": "Authorization: Basic bXVsdGljaGFpbnJwYzo3OXBnS1F1c2lIM1ZEVnB5enNNNmUza1J6NmdXTmN0QXdnSnZ5bUczaWl1eg==\nContent-Type: application/json\n",
+			"headers": "Authorization: Basic {{access-token}}\nContent-Type: application/json\n",
 			"url": "{{chain-url}}",
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -527,7 +547,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474699129504,
+			"time": 1475585938346,
 			"name": "Issue Vehicle Asset",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
