@@ -10,7 +10,7 @@ services:
       - "9578:9578"
     environment:
       CHAIN: test-chain
-      PEER: rtcblockchain03.westeurope.cloudapp.azure.com:9579
+      PEER: rtcblockchain01.japaneast.cloudapp.azure.com:9579
 
 volumes:
   multichain_data:
