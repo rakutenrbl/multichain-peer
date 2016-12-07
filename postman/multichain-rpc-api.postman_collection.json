@@ -50,6 +50,7 @@
 			"name": "02 - Custom Assets",
 			"description": "",
 			"order": [
+				"5dad033d-9344-7a45-ea3f-733db547fb7c",
 				"43032975-4dc3-7276-86a4-b9d73570eeed",
 				"84642e2e-d42d-b7b5-36e6-14500d8dda53",
 				"c874c3d5-9d73-27d8-0102-2ebb4eb7d3f2",
@@ -101,7 +102,6 @@
 				"99759122-0a10-15de-9327-18901c39401b",
 				"b2334517-f358-212f-52be-528d4e63a29b",
 				"f7928d7e-e573-cac8-d88c-51f3862df6c8",
-				"a79ddb14-8626-ea91-8f52-e5a5cbf290eb",
 				"7acabfe3-790d-4b30-fb75-bc63d3b57262"
 			],
 			"owner": "950651",
@@ -111,7 +111,6 @@
 	"timestamp": 0,
 	"owner": "950651",
 	"public": false,
-	"published": false,
 	"requests": [
 		{
 			"id": "03a1f0cb-d9a4-b720-cd10-e04c91896b0e",
@@ -182,13 +181,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474925723865,
+			"time": 1481112636439,
 			"name": "Issue Feedback Slips",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"folder": "0a299610-3554-3ca9-57da-542392702a44",
-			"rawModeData": "{\n    \"method\":\"issue\",\n    \"params\":[\n        \"{{wallet-address}}\",\n        {\n        \t\"name\": \"FEEDBACK-SLIP\", \n        \t\"open\": true\n        },\n        1000,\n        1,\n        0,\n        {\n        \t\"type\": \"feedback-slip\",\n        \t\"conference\": \"RAK Technical Conference\",\n        \t\"note\": \"Provide feedback for 10 CRIMSON-COINS in return\"\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
+			"rawModeData": "{\n    \"method\":\"issue\",\n    \"params\":[\n        \"{{wallet-address}}\",\n        {\n        \t\"name\": \"FEEDBACK-SLIP\", \n        \t\"open\": true\n        },\n        1000,\n        1,\n        0,\n        {\n        \t\"type\": \"feedback-slip\",\n        \t\"event\": \"Belfast Blockchain Meetup - 8th Dec 2016\",\n        \t\"note\": \"Provide feedback for 10 MEETUP-COINS in return\"\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "1aae8eae-4904-6848-3200-82ad5b47e51c",
@@ -278,12 +276,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1475585923406,
-			"name": "Issue Crimson Coin",
+			"time": 1481112445754,
+			"name": "Issue Meetup Coin",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"rawModeData": "{\n    \"method\":\"issue\",\n    \"params\":[\n        \"{{wallet-address}}\",\n        {\n        \t\"name\": \"CRIMSON-COIN\", \n        \t\"open\": true\n        },\n        100000,\n        1,\n        0,\n        {\n        \t\"type\": \"crimson-coin\",\n        \t\"conference\": \"RAK Technical Conference\",\n        \t\"note\": \"Initial asset issuance\"\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
+			"rawModeData": "{\n    \"method\":\"issue\",\n    \"params\":[\n        \"{{wallet-address}}\",\n        {\n        \t\"name\": \"MEETUP-COIN\", \n        \t\"open\": true\n        },\n        100000,\n        1,\n        0,\n        {\n        \t\"type\": \"meetup-coin\",\n        \t\"meetup\": \"Belfast Bockchain Meetup - 8th Dec 2016\",\n        \t\"note\": \"Initial coin issuance\"\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "4325a97e-6f2e-7430-c096-81808a921367",
@@ -360,6 +358,25 @@
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
 			"rawModeData": "{\"method\":\"dumpprivkey\",\"params\":[\"{{wallet-address}}\"],\"id\":1,\"chain_name\":\"{{chain-name}}\"}\n"
+		},
+		{
+			"id": "5dad033d-9344-7a45-ea3f-733db547fb7c",
+			"headers": "Authorization: Basic {{access-token}}\nContent-Type: application/json\n",
+			"url": "{{chain-url}}",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1481112332501,
+			"name": "Issue RBL Tokens",
+			"description": "",
+			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
+			"responses": [],
+			"rawModeData": "{\n    \"method\":\"issue\",\n    \"params\":[\n        \"{{wallet-address}}\",\n        {\n        \t\"name\": \"RBL-TOKEN\", \n        \t\"open\": true\n        },\n        100000,\n        1,\n        0,\n        {\n        \t\"type\": \"rbl-token\",\n        \t\"event\": \"Belfast Blockchain Meetup\",\n        \t\"note\": \"Rakuten Blockchain Lab Tokens\"\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "5f2b144e-205a-3afb-9de4-4d9b6f44ffc4",
@@ -450,13 +467,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474786851408,
+			"time": 1481112489108,
 			"name": "Transfer Assets",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"folder": "5b7a794a-3529-68c7-8b2b-a8f63cca318a",
-			"rawModeData": "{\n    \"method\":\"sendassettoaddress\",\n    \"params\":[\n        \"{{to-address}}\",\n        \"CRIMSON-COIN\",\n        100\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
+			"rawModeData": "{\n    \"method\":\"sendassettoaddress\",\n    \"params\":[\n        \"{{to-address}}\",\n        \"MEETUP-COIN\",\n        100\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "6c7f31b4-6dd8-1640-2c53-78900eaa1e9b",
@@ -489,12 +505,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474884870159,
+			"time": 1481112563368,
 			"name": "Transfer Assets with Metadata",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"rawModeData": "{\n    \"method\":\"sendwithmetadata\",\n    \"params\":[\n        \"{{to-address}}\",\n        {\"CRIMSON-COIN\":100},\n        \"5468616e6b7320666f7220616c6c2074686520666973682e2e2e2e2e2e\"\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
+			"rawModeData": "{\n    \"method\":\"sendwithmetadata\",\n    \"params\":[\n        \"{{to-address}}\",\n        {\"MEETUP-COIN\":100},\n        \"5468616e6b7320666f7220616c6c2074686520666973682e2e2e2e2e2e\"\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "73f67d95-100e-4fb0-6644-ddfab557c838",
@@ -604,12 +620,12 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474928517470,
+			"time": 1481112665737,
 			"name": "Create Feedback Transaction",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"rawModeData": "{\n    \"method\":\"createrawtransaction\",\n    \"params\":[\n        [\n        \t{\"txid\":\"{{txid-feedback-slip}}\",\"vout\":{{vout-feedback-slip}}},\n        \t{\"txid\":\"{{txid-reward}}\",\"vout\":{{vout-reward}}}\n        ],\n        {\n        \t\"{{feedback-address}}\": {\n        \t\t\"FEEDBACK-SLIP\":1\n        \t},\n        \t\"{{wallet-address}}\": {\n        \t\t\"CRIMSON-COIN\":10\n        \t},\n        \t\"{{reward-address}}\": {\n        \t\t\"CRIMSON-COIN\":990\n        \t}\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
+			"rawModeData": "{\n    \"method\":\"createrawtransaction\",\n    \"params\":[\n        [\n        \t{\"txid\":\"{{txid-feedback-slip}}\",\"vout\":{{vout-feedback-slip}}},\n        \t{\"txid\":\"{{txid-reward}}\",\"vout\":{{vout-reward}}}\n        ],\n        {\n        \t\"{{feedback-address}}\": {\n        \t\t\"FEEDBACK-SLIP\":1\n        \t},\n        \t\"{{wallet-address}}\": {\n        \t\t\"MEETUP-COIN\":10\n        \t},\n        \t\"{{reward-address}}\": {\n        \t\t\"MEETUP-COIN\":990\n        \t}\n        }\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "a692ecd3-5180-26e5-45f4-476046e63c85",
@@ -629,26 +645,6 @@
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
 			"rawModeData": "{\n\t\"method\":\"getwallettransaction\",\n\t\"params\":[\n\t\t\"{{txid}}\",\n\t\tfalse,\n\t\ttrue\n\t],\n\t\"id\":1,\n\t\"chain_name\":\"{{chain-name}}\"\n}"
-		},
-		{
-			"id": "a79ddb14-8626-ea91-8f52-e5a5cbf290eb",
-			"headers": "Authorization: Basic {{access-token}}\nContent-Type: application/json\n",
-			"url": "{{chain-url}}",
-			"preRequestScript": "",
-			"pathVariables": {},
-			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
-			"tests": "",
-			"currentHelper": "normal",
-			"helperAttributes": {},
-			"time": 1474893573852,
-			"name": "Sign Raw Transaction - Reward",
-			"description": "",
-			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
-			"responses": [],
-			"folder": "0a299610-3554-3ca9-57da-542392702a44",
-			"rawModeData": "{\n    \"method\":\"signrawtransaction\",\n    \"params\":[\n        \"{{tx-hex}}\",\n        null,\n        [\"{{wallet-private-key}}\"]\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
 			"id": "af70b642-874a-3bf4-3941-84df175082bd",
@@ -681,12 +677,11 @@
 			"tests": "",
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1474924675918,
+			"time": 1481112766620,
 			"name": "Append Feedback To Transaction",
 			"description": "",
 			"collectionId": "f5d8ccbb-ab12-0e38-1d96-13a03ab94de1",
 			"responses": [],
-			"folder": "0a299610-3554-3ca9-57da-542392702a44",
 			"rawModeData": "{\n    \"method\":\"appendrawmetadata\",\n    \"params\":[\n        \"{{tx-hex}}\",\n        \"{{meta-data}}\"\n    ],\n    \"id\":1,\n    \"chain_name\":\"{{chain-name}}\"\n}\n"
 		},
 		{
