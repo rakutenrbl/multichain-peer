@@ -9,8 +9,8 @@ services:
     ports:
       - "9578:9578"
     environment:
-      CHAIN: test-chain
-      PEER: rtcblockchain01.japaneast.cloudapp.azure.com:9579
+      CHAIN: crimson-chain
+      PEER: rblchain01.westeurope.cloudapp.azure.com:9579
 
 volumes:
   multichain_data:
