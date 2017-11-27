@@ -5,12 +5,13 @@ services:
   peer:
     image: rakutenrbl/multichain-peer:latest
     volumes:
-      - multichain_data:/root
+      - multichain_peer_data:/root
     ports:
-      - "9578:9578"
+      - "7801:7801"
+      - "7802:7802"
     environment:
-      CHAIN: crimson-chain
-      PEER: rblchain01.westeurope.cloudapp.azure.com:9579
+      CHAIN: test-chain
 
 volumes:
-  multichain_data:
+  multichain_peer_data:
+

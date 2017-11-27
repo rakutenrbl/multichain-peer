@@ -17,15 +17,20 @@ trap 'stop_multichain_gracefully' SIGTERM
 
 mkdir -p /root/.multichain/${CHAIN}
 
-if [ ! -e /root/.multichain/${CHAIN}/multichain.conf ]; then
+if [[ ! -e /root/.multichain/${CHAIN}/params.dat ]]; then
+
+    echo "Creating Main Blockchain Node for: ${CHAIN}"
+    multichain-util create ${CHAIN}
+
     cp /root/.multichain/configurations/multichain.conf /root/.multichain/${CHAIN}/multichain.conf
 fi
+
 if [ ! -e /root/.multichain/${CHAIN}/debug.log ]; then
     touch /root/.multichain/${CHAIN}/debug.log
 fi
 
 # Start multicahin in the background.  Similar to -daemon, but this approach returns the pid to the shell
-multichaind ${CHAIN}@${PEER} &
+multichaind ${CHAIN} &
 pid="$!"
 
 echo "multichain pid: " $pid
